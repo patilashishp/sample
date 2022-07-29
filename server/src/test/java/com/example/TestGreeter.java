@@ -100,4 +100,18 @@ public class TestGreeter {
 
     assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
   }
+  
+  @Test
+  public void greetShouldIncludeTheOneBeingGreeted6() {
+    String someone = "World";
+
+    assertThat(greeter.greet(someone), containsString(someone));
+  }
+
+  @Test
+  public void greetShouldIncludeGreetingPhrase6() {
+    String someone = "World";
+
+    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+  }
 }
